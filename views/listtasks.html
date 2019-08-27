@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+        }    
+    </style>
+</head>
+
+
+<body>
+
+    <a href = "/">Home </a>
+    <a href = "/newtask">Add new Task </a>
+    <h3>List all tasks:
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Due Date</td>
+                <td>Description</td>
+            </tr>
+            <% for ( var i=0; i< listDb.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= listDb[i].username %>
+                    </td>
+                    <td>
+                            <%= listDb[i].taskdue %>
+                    </td>
+                    <td>
+                            <%= listDb[i].taskdescrip %>
+                    </td>
+                </tr>
+
+            <% }%>
+        
+
+    </h3>
+</body>
+
+</html>
